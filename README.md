@@ -1,1 +1,1 @@
-Prefered name: Rishi Sudharsan
+Preferred name: Rishi Sudharsan
