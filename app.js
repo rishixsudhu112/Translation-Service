@@ -1,3 +1,4 @@
+require('dotenv').config();
 
 // const openModalButtons = document.querySelectorAll("[data-modal-target]");
 // const closeModalButtons = document.querySelectorAll("[data-close-button]");
@@ -46,9 +47,8 @@
 //   overlay.classList.remove("active");
 // }
 
-const API_KEY =
-  "a_4boRTqYV6rqy3VPlbsys6SOG7NRaCiqPhx8ax0em1z7u5Hu1PoUxtzBJ3yrmFkmAUQ6nmKtQLK8mEamP"; // Replace with your actual API key
-const API_URL = "https://api-b2b.backenster.com/b1/api/v3/translate";
+const API_KEY = process.env.API_KEY
+const API_URL = process.env.API_URL;
 
 async function translateText(text, sourceLang, targetLang) {
   const response = await fetch(API_URL, {
@@ -112,6 +112,6 @@ async function translateText(text, sourceLang, targetLang) {
 //   });
 
 
-  const newText = translateText(selectedText, "en_GB", "es_ES")
-    .then((translatedText) => console.log(translatedText))
-    .catch((error) => console.error(error));
+  // const newText = translateText(selectedText, "en_GB", "es_ES")
+  //   .then((translatedText) => console.log(translatedText))
+  //   .catch((error) => console.error(error));
